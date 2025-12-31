@@ -67,7 +67,7 @@ formatToggle.addEventListener('click', () => {
 
 
 
-let timer = setInterval(() => {
+let Timer = setInterval(() => {
     DigitalClock()
 }, 1000);
 
