@@ -44,11 +44,13 @@ let DigitalClock = () => {
     // ADDING IN DOM
     if (chagneFormat) {
         let twelveFormat = hours % 12
-        if (twelveFormat > 0 && twelveFormat < 10) {
+        if (twelveFormat >= 0 && twelveFormat < 10) {
             hours = '0' + twelveFormat
+            console.log(hours)
+        } else {
+            hoursElm.textContent = twelveFormat
+            formatToggle.textContent = 'Switch to 24-Hour'
         }
-        hoursElm.textContent = hours
-        formatToggle.textContent = 'Switch to 24-Hour'
     } else {
         hoursElm.textContent = hours
         formatToggle.innerText = 'Switch to 12-Hour'
